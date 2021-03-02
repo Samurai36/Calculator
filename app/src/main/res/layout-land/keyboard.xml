@@ -156,5 +156,4 @@
             android:text="@string/btnDivide"
             android:textSize="@dimen/btn_txt_size" />
     </TableRow>
-
 </TableLayout>
