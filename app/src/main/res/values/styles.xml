@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="btnStyle" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:layout_margin">@dimen/margin</item>
+    </style>
+
+</resources>
