@@ -2,9 +2,15 @@ package viktor.khlebnikov.geekgrains.android1.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
     private Button mButtonClear;
     private Button mButtonResult;
     private TextView mResultField;
+    private RadioGroup mChangeTheme;
+    private RadioButton mChangeThemeLight;
+    private RadioButton mChangeThemeDark;
+
+    private static final String prefs = "prefs.xml";
+    private static final String pref_name = "theme";
 
     private float mValueOne;
     private float mValueTwo;
@@ -40,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
     private Float operand = null;
 
     private final View.OnClickListener btnNumberListener = (view) -> {
+
+        isText(mResultField);
 
         switch (view.getId()) {
 
@@ -160,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.keyboard);
 
@@ -181,6 +196,9 @@ public class MainActivity extends AppCompatActivity {
         mButtonClear = findViewById(R.id.buttonClear);
         mButtonResult = findViewById(R.id.buttonResult);
         mResultField = findViewById(R.id.textView2);
+        mChangeTheme = findViewById(R.id.themeGroup);
+        mChangeThemeLight = findViewById(R.id.themeLight);
+        mChangeThemeDark = findViewById(R.id.themeDark);
 
         mButton0.setOnClickListener(btnNumberListener);
         mButton1.setOnClickListener(btnNumberListener);
@@ -196,7 +214,8 @@ public class MainActivity extends AppCompatActivity {
         mButtonPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                isText(mResultField);
+                textIsMinusOnly(mResultField);
                 if (mResultField.getText() == "0") {
                     mResultField.setText("");
                 } else {
@@ -211,16 +230,24 @@ public class MainActivity extends AppCompatActivity {
         mButtonMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(mResultField.getText() + "");
-                operand = mValueOne;
-                crunchifyMinus = true;
-                mResultField.setText("0");
+                isText(mResultField);
+                textIsMinusOnly(mResultField);
+                if (mResultField.getText() == "0") {
+                    mResultField.setText("-");
+                } else {
+                    mValueOne = Float.parseFloat(mResultField.getText() + "");
+                    operand = mValueOne;
+                    crunchifyMinus = true;
+                    mResultField.setText("0");
+                }
             }
         });
 
         mButtonMultiple.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                isText(mResultField);
+                textIsMinusOnly(mResultField);
                 mValueOne = Float.parseFloat(mResultField.getText() + "");
                 operand = mValueOne;
                 crunchifyMultiple = true;
@@ -231,6 +258,8 @@ public class MainActivity extends AppCompatActivity {
         mButtonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                isText(mResultField);
+                textIsMinusOnly(mResultField);
                 mValueOne = Float.parseFloat(mResultField.getText() + "");
                 operand = mValueOne;
                 crunchifyDivision = true;
@@ -241,41 +270,46 @@ public class MainActivity extends AppCompatActivity {
         mButtonResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                isText(mResultField);
+                textIsMinusOnly(mResultField);
                 mValueTwo = Float.parseFloat(mResultField.getText() + "");
 
-                if (crunchifyPlus == true) {
+                if (crunchifyPlus) {
                     mResultField.setText(mValueOne + mValueTwo + "");
                     operand = (mValueOne + mValueTwo);
                     crunchifyPlus = false;
                 }
 
-                if (crunchifyMinus == true) {
+                if (crunchifyMinus) {
                     mResultField.setText(mValueOne - mValueTwo + "");
                     operand = (mValueOne - mValueTwo);
                     crunchifyMinus = false;
                 }
 
-                if (crunchifyMultiple == true) {
+                if (crunchifyMultiple) {
                     mResultField.setText(mValueOne * mValueTwo + "");
                     operand = (mValueOne * mValueTwo);
                     crunchifyMultiple = false;
+                    if (Float.isInfinite(operand))
+                        mResultField.setText(R.string.exception_infinity);
                 }
 
-                if (crunchifyDivision == true) {
+                if (crunchifyDivision) {
                     if (mValueTwo == 0) {
-                        mResultField.setText("Don't divide by zero");
+                        mResultField.setText(R.string.exeption_divide_zero);
                     } else
                         mResultField.setText(mValueOne / mValueTwo + "");
                     operand = (mValueOne / mValueTwo);
                     crunchifyDivision = false;
                 }
+
             }
         });
 
         mButtonClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mResultField.setText("");
+                mResultField.setText("0");
                 operand = null;
             }
         });
@@ -283,12 +317,25 @@ public class MainActivity extends AppCompatActivity {
         mButtonPt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                isText(mResultField);
+                textIsMinusOnly(mResultField);
                 String result = mResultField.getText().toString();
                 if (!result.contains(".")) {
                     mResultField.setText(mResultField.getText() + ".");
                 }
             }
         });
+
     }
 
+    void textIsMinusOnly(View v) {
+        if (mResultField.getText() == "-") {
+            mResultField.setText("0");
+        }
+    }
+
+    void isText(View v) {
+        if (!mResultField.getText().toString().matches("[\\d,\\-,.,\\,]+"))
+            mResultField.setText("0");
+    }
 }
