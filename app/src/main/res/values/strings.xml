@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calculator</string>
+    <string name="app_name">My calculator</string>
     <string name="button1" translatable="false">1</string>
     <string name="button2" translatable="false">2</string>
     <string name="button3" translatable="false">3</string>
@@ -17,8 +17,10 @@
     <string name="btnMultiple" translatable="false">*</string>
     <string name="btnResult" translatable="false">=</string>
     <string name="btnClear" translatable="false">C</string>
-    <string name="light_theme">Light theme</string>
-    <string name="dark_theme">Dark theme</string>
+    <string name="btnSettings">Settings</string>
+    <string name="light_theme">off</string>
+    <string name="dark_theme">on</string>
     <string name="exeption_divide_zero">Don\'t divide by zero</string>
     <string name="exception_infinity">Infinity</string>
+    <string name="switch_night_mode">Night mode</string>
 </resources>

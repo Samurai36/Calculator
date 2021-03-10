@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_columnSpan="4"
-    android:gravity="center"
-    android:background="@drawable/bckgrnd">
+    android:gravity="center">
 
     <TableRow
+        style="@style/btnStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        style="@style/btnStyle">
+        android:gravity="center">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView2"
@@ -20,174 +20,197 @@
             android:fontFamily="@font/calculate"
             android:text="0"
             android:textColor="@color/colorBlue"
+            android:textSize="@dimen/btn_txt_size"
             android:textStyle="bold" />
     </TableRow>
 
 
     <TableRow
+        style="@style/btnStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        style="@style/btnStyle">
+        android:gravity="center">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_span="4"
             android:text="@string/btnClear"
-            android:layout_span = "4"
-            android:textSize="@dimen/btn_txt_size"/>
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
     </TableRow>
 
     <TableRow
+        style="@style/btnStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        style="@style/btnStyle">
+        android:gravity="center">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button7"
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
 
-            android:textSize="@dimen/btn_txt_size" />
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button8"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button9"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPls"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnPls"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
     </TableRow>
+
     <TableRow
+        style="@style/btnStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        style="@style/btnStyle">
+        android:gravity="center">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button4"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button5"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button6"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMns"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnMns"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
     </TableRow>
+
     <TableRow
+        style="@style/btnStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        style="@style/btnStyle">
+        android:gravity="center">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button1"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button2"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button3"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMultiple"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnMultiple"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
     </TableRow>
+
     <TableRow
+        style="@style/btnStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        style="@style/btnStyle">
+        android:gravity="center">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button0"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnPt"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnResult"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDivide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnDivide"
-            android:textSize="@dimen/btn_txt_size" />
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
     </TableRow>
 
     <TableRow
+        style="@style/btnStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        style="@style/btnStyle">
+        android:gravity="center">
 
-        <RadioGroup
-            android:id="@+id/themeGroup"
-            android:layout_width="match_parent"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSettings"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span = "4">
-
-            <RadioButton
-                android:id="@+id/themeDark"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/light_theme" />
-
-            <RadioButton
-                android:id="@+id/themeLight"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/dark_theme" />
-        </RadioGroup>
+            android:layout_span="3"
+            android:text="@string/btnSettings"
+            android:textSize="@dimen/btn_txt_size"
+            app:cornerRadius="@dimen/radiusBtn" />
     </TableRow>
 
 </TableLayout>
