@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="btnStyle" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:textSize">@dimen/btn_txt_size</item>
+        <item name="android:layout_height">@dimen/field_size</item>
+        <item name="android:textColor">@color/design_default_color_primary</item>
+        <item name="android:fontFamily">bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="colorControlActivated">@android:color/holo_green_light</item>
+        <item name="colorSwitchThumbNormal">@android:color/holo_orange_dark</item>
+        <item name="android:colorForeground">@android:color/darker_gray</item>
+    </style>
+
+</resources>

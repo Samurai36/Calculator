@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">Calculator</string>
+    <string name="app_name">My calculator</string>
+    <string name="button1" translatable="false">1</string>
+    <string name="button2" translatable="false">2</string>
+    <string name="button3" translatable="false">3</string>
+    <string name="button4" translatable="false">4</string>
+    <string name="button5" translatable="false">5</string>
+    <string name="button6" translatable="false">6</string>
+    <string name="button7" translatable="false">7</string>
+    <string name="button8" translatable="false">8</string>
+    <string name="button9" translatable="false">9</string>
+    <string name="button0" translatable="false">0</string>
+    <string name="btnPt" translatable="false">.</string>
+    <string name="btnMns" translatable="false">-</string>
+    <string name="btnPls" translatable="false">+</string>
+    <string name="btnDivide" translatable="false">/</string>
+    <string name="btnMultiple" translatable="false">*</string>
+    <string name="btnResult" translatable="false">=</string>
+    <string name="btnClear" translatable="false">C</string>
+    <string name="btnSettings">Settings</string>
+    <string name="light_theme">off</string>
+    <string name="dark_theme">on</string>
+    <string name="exeption_divide_zero">Don\'t divide by zero</string>
+    <string name="exception_infinity">Infinity</string>
+    <string name="switch_night_mode">Night mode</string>
 </resources>

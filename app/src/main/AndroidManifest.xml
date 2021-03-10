@@ -12,10 +12,21 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CALCULATE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/calculate"/>
+            </intent-filter>
         </activity>
+        <activity android:name=".Settings"
+            android:label="@string/btnSettings"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Dialog">
+        </activity>
+
     </application>
 
 </manifest>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_txt_size">24sp</dimen>
+    <dimen name="margin">4dp</dimen>
+    <dimen name="field_size">30dp</dimen>
+    <dimen name="radiusBtn">15dp</dimen>
+</resources>
